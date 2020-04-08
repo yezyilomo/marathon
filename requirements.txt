@@ -1,0 +1,8 @@
+gunicorn
+psycopg2
+django
+django-cors-headers
+djangorestframework
+django-filter
+django-restql
+drf-guard

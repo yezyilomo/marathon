@@ -6,11 +6,12 @@ API service for Marathon
 ## Installation
 
 `sudo apt install postgresql`
+
 `sudo apt install postgresql-server-dev-10`
 
 `pip install -r requirements.txt`
 
-Create postgres database
+Create postgreSQL database
 
 Go to `settings.py` and change database name, user and password accordingly
 
@@ -57,8 +58,10 @@ Available HTTP Method
 Data Format
 ```js
 {
-    "username": "string",
-    "password": "password"
+    "username": "string",  // Must be a valid username
+    "email": "string",  // Must be a valid email
+    "password": "password",  // Must be a valid password
+    "role": "string"  // Value must be either "client", "organizer" or "admin"
 }
 ```
 
@@ -156,7 +159,7 @@ Data Format
 ### Sponsors
 Available Routes 
 * `/sponsors/`
-* `/sponsors/{id`}/`
+* `/sponsors/{id}/`
 
 **Note:** This also is not meant to be used directly(use marathon's sponsors field to create and update instead)
 
